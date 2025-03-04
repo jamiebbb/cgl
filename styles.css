@@ -1,0 +1,257 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Typography */
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navigation__link:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.title {
+    padding: 8rem 0 4rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+/* Group Slider */
+.the-group {
+    padding: 4rem 0;
+}
+
+.the-group-slider {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+}
+
+.member {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+/* CTAs */
+.main-ctas {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.main-ctas ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button--reverse {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.button--reverse:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 2rem;
+}
+
+.site-footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .main-ctas ul {
+        flex-direction: column;
+    }
+
+    .site-footer__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Share Price Widget */
+.navigation__price-items {
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.price {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Newsletter Form */
+.newsletter {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+} 
